@@ -1,0 +1,34 @@
+-----------------------------------------------------------------------------------
+NAMA    : GABRIEL CESAR HUTAGALUNG
+NIM     : 11S21010
+PRODI   : S1 INFORMATIKA
+-----------------------------------------------------------------------------------
+DEFENISI DAN SPESIFIKASI                                        isMemberLS
+
+isMemberLS : list, list of list --> boolean
+
+{isMemberLS (L, S) adalah fungsi yang akan melakukan pengecekan apakah list of list
+tersebut mengandung list yang sesuai dengan input user.}
+
+{basis  : L dan S adalah list kosong : --> true
+        : L atau S tidak kosong : --> false
+
+ e1     : head(S) : (S1) e1
+ S1     : head(S)
+
+ rekurens :
+    L adalah atom dari S    : isMemberLS(L, head(S1)) : true
+    L bukan atom dari S     : isMemberLS(L, head(S1)) : false
+}
+-----------------------------------------------------------------------------------
+REALISASI
+
+isMemberLS (L, S)
+    if konsL.(L S1) = S : true
+    not konsL.(L S1) = S : false
+
+    depend on S1
+        isMemberLS(L, head(S1)) : true
+        else : false
+
+-----------------------------------------------------------------------------------
