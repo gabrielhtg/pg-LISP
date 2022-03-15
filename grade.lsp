@@ -1,0 +1,13 @@
+(defun grade(x)
+    (cond
+        ((> x 100) "Tidak dapat ditentukan!")
+        ((>= x 80) 'A)
+        ((>= x 72) 'AB)
+        ((>= x 65) 'B)
+        ((>= x 57) 'BC)
+        ((>= x 50) 'C)
+        ((>= x 35) 'D)
+        ((and (>= x 0) (< x 35)) 'E)
+        ((< x 0) "Tidak dapat ditentukan!")
+    )
+)
